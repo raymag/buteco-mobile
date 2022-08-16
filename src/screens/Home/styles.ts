@@ -43,7 +43,10 @@ export const ModalContainer = styled.View`
   padding: 20px;
   width: 80%;
 `;
-export const Text = styled.Text``;
+export const Text = styled.Text`
+  color: ${(props: ThemeType) => props.theme.colors.primary};
+  font-family: ${(props: ThemeType) => props.theme.fonts.content};
+`;
 export const Input = styled.TextInput`
   border: solid 3px transparent;
   border-bottom-color: ${(props: ThemeType) => props.theme.colors.primary};

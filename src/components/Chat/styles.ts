@@ -26,6 +26,7 @@ export const Message = styled.View`
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
 `;
 export const Sender = styled.Text`
   font-size: ${RFValue(16)}px;
