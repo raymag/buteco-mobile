@@ -3,14 +3,14 @@ import Button from '../../components/Button';
 import {SocketContext} from '../../hooks/socket';
 import {Footer, Input} from './styles';
 
-const MessageSender = ({id}: any) => {
+const MessageSender = ({id, nickname}: any) => {
   const [message, setMessage] = useState('');
   const {socket} = useContext(SocketContext);
 
   const sendMessage = (message: string) => {
     if (message !== '') {
       socket.emit('chat-message', {
-        nickname: 'Bêbado',
+        nickname: nickname,
         message: message,
         id: id,
       });

@@ -1,9 +1,9 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useRef} from 'react';
 import {ScrollView} from 'react-native';
 import {useMessage} from '../../hooks/useMessage';
 import {Container, Message, Sender, Text} from './styles';
 
-const Chat = () => {
+const Chat = ({id}: any) => {
   const {messages} = useMessage();
   const scrollViewRef = useRef<ScrollView>(null);
 
@@ -16,7 +16,7 @@ const Chat = () => {
         }>
         {messages.map((msg, index) => {
           return (
-            <Message key={index} highlight={msg.highlight}>
+            <Message key={index} highlight={msg.id === id && id !== 'unknown'}>
               <Sender>{msg.nickname}: </Sender>
               <Text>{msg.message}</Text>
             </Message>

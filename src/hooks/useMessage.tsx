@@ -14,13 +14,7 @@ type MessageContextProps = {
 
 const MessageContext = createContext({} as MessageContextProps);
 export const MessageProvider = ({children}: any) => {
-  const [messages, setMessages] = useState<MessageProps[]>([
-    {
-      nickname: 'string',
-      message: 'string',
-      id: 'string',
-    },
-  ]);
+  const [messages, setMessages] = useState<MessageProps[]>([]);
 
   return (
     <MessageContext.Provider
