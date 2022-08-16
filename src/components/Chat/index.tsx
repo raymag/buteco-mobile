@@ -1,15 +1,12 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {ScrollView} from 'react-native';
+import {useMessage} from '../../hooks/useMessage';
 import {Container, Message, Sender, Text} from './styles';
 
-import {Message as MessageType} from '../../../App';
-
-type Props = {
-  messages: MessageType[];
-};
-
-const Chat = ({messages}: Props) => {
+const Chat = () => {
+  const {messages} = useMessage();
   const scrollViewRef = useRef<ScrollView>(null);
+
   return (
     <Container>
       <ScrollView
@@ -17,12 +14,14 @@ const Chat = ({messages}: Props) => {
         onContentSizeChange={() =>
           scrollViewRef.current?.scrollToEnd({animated: false})
         }>
-        {messages.map((msg, index) => (
-          <Message key={index}>
-            <Sender>{msg.nickname}: </Sender>
-            <Text>{msg.message}</Text>
-          </Message>
-        ))}
+        {messages.map((msg, index) => {
+          return (
+            <Message key={index} highlight={msg.highlight}>
+              <Sender>{msg.nickname}: </Sender>
+              <Text>{msg.message}</Text>
+            </Message>
+          );
+        })}
       </ScrollView>
     </Container>
   );
