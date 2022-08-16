@@ -9,6 +9,7 @@ export const Container = styled.View`
   height: 85%;
   margin: 20px 0;
   padding: 15px 5px;
+  position: relative;
 `;
 
 export const Message = styled.View`
@@ -18,6 +19,8 @@ export const Message = styled.View`
       : props.theme.colors.background.secondary};
   padding: 10px 5px;
   margin-bottom: 10px;
+  margin-left: ${(props: any) => (props.highlight ? '60px' : '0')};
+  margin-right: ${(props: any) => (props.highlight ? '0' : '60px')};
   border: solid 1px ${(props: ThemeType) => props.theme.colors.glass};
   border-radius: 5px;
   display: flex;

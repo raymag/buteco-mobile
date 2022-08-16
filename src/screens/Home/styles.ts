@@ -9,7 +9,7 @@ export const Veil = styled.View`
 `;
 export const Container = styled.View`
   background: #22222211;
-  padding: 20px;
+  padding: 20px 10px;
   margin: 10px 0;
   border-radius: 10px;
   min-width: 90%;
