@@ -1,4 +1,4 @@
-package com.buteco.newarchitecture.modules;
+package com.raymag.buteco.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

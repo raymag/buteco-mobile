@@ -1,4 +1,4 @@
-package com.buteco;
+package com.raymag.buteco;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

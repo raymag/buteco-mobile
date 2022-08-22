@@ -1,4 +1,4 @@
-package com.buteco.newarchitecture;
+package com.raymag.buteco.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.buteco.BuildConfig;
-import com.buteco.newarchitecture.components.MainComponentsRegistry;
-import com.buteco.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.raymag.buteco.BuildConfig;
+import com.raymag.buteco.newarchitecture.components.MainComponentsRegistry;
+import com.raymag.buteco.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

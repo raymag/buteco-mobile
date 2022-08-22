@@ -1,4 +1,4 @@
-package com.buteco.newarchitecture.components;
+package com.raymag.buteco.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;
